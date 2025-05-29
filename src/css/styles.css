@@ -11732,3 +11732,55 @@ html {
     left: -2vw;
   }
 }
+.card-custom-bg {
+  background-color: #16219c;
+  background-position: right 1.5rem center;
+  background-size: 20vw auto; /* taille responsive */
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(30, 48, 243, 0.1);
+  padding: 2rem;
+  color: #fff;
+  min-height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-custom-bg a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.card-custom-bg a:hover {
+  color: #0ab007;
+  text-decoration: none;
+}
+
+.card-custom-bg .bi {
+  position: relative;
+  z-index: 1; /* au-dessus du background */
+  font-size: 2.5rem; /* taille responsive */
+  transition: font-size 0.2s;
+  font-size: 2rem;
+}
+.card-custom-bg::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  transform: translateY(-50%);
+  width: 60%;
+  height: 120%;
+  background: #ffffff;
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  z-index: 0;
+  opacity: 0.15;
+}
+@media (max-width: 768px) {
+  .card-custom-bg {
+    padding: 1rem;
+    background-size: 30vw auto;
+    min-height: 120px;
+  }
+}
