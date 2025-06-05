@@ -43,6 +43,9 @@
                 <div class="col-12">
                     <h2 class="mb-3 text-gradient fw-bold">CTF+Z</h2>
 
+                    <div class="col-lg-3 d-flex justify-content-center align-items-center p-4">
+                        <img class="img-fluid rounded-4 shadow" src="../assets/CTF+Z/Ctdf.png" alt="CTF+Z" />
+                    </div>
                     <h3 class="text-secondary mb-3">Résumé</h3>
                     <p class="text-muted">
                         CTF+Z est une plateforme CTF destinée à sensibiliser un large public à la cybersécurité via des défis interactifs. Elle se veut conviviale, accessible et sécurisée. Les utilisateurs peuvent participer seuls ou en équipe à des événements regroupant plusieurs types de challenges. Le tout repose sur CTFd, enrichi de personnalisations répondant aux besoins précis de l’association cliente.
@@ -91,7 +94,15 @@
                             Support technique auprès des coéquipiers en cas de blocage sur l’environnement.
                         </li>
                     </ul>
-
+                    <div class="mt-4">
+                        <ul class="d-flex flex-column flex-md-row flex-wrap gap-3 p-0 m-0 list-unstyled justify-content-start">
+                            <li class="list-inline-item">
+                                <a href="https://ctf-eq5.yggame.fr" class="btn btn-primary rounded-pill px-4 py-2 shadow-sm">
+                                    voir le site web
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -104,10 +115,9 @@
                 <div class="col-md-3">
                     <div class="card card-custom-bg h-100">
                         <div class="card-body">
-                            <h5 class="card-title">AC 1 : Optimiser les modèles de données de l’entreprise</h5>
+                            <h5 class="card-title">AC 1 : Choisir des structures de données complexes adaptées au problème</h5>
                             <p class="card-text">
-                                Adaptation du schéma de CTFd pour gérer les événements, équipes, scores et nouveaux types de plugins.<br>
-                                Travail sur les relations utilisateurs/défis/réponses pour faciliter la recherche et l’analyse.
+                                Les plugins développés (notifications Discord) manipulent des données utilisateur, scores et logs, en s’appuyant sur des structures adaptées (objets Python, relations SQL).
                             </p>
                         </div>
                     </div>
@@ -115,11 +125,9 @@
                 <div class="col-md-3">
                     <div class="card card-custom-bg h-100">
                         <div class="card-body">
-                            <h5 class="card-title">AC 2 : Assurer la confidentialité des données</h5>
+                            <h5 class="card-title">AC 2 : Utiliser des techniques algorithmiques adaptées pour des problèmes complexes</h5>
                             <p class="card-text">
-                                RGPD respecté : consentement, suppression de compte, droits des utilisateurs.<br>
-                                Sécurisation des mots de passe, des connexions et des logs.<br>
-                                Hébergement sur serveur personnel avec backups et cloisonnement.
+                                Le projet ne comportait pas d’algorithmes complexes comme en IA ou optimisation globale, mais les défis créés (notamment ceux de type cryptographie ou reverse engineering) mobilisent des raisonnements algorithmiques adaptés à la cybersécurité.
                             </p>
                         </div>
                     </div>
@@ -127,10 +135,11 @@
                 <div class="col-md-3">
                     <div class="card card-custom-bg h-100">
                         <div class="card-body">
-                            <h5 class="card-title">AC 3 : Organiser la restitution de données</h5>
+                            <h5 class="card-title">AC 3 : Comprendre les enjeux et moyens de sécurisation des données et du code</h5>
                             <p class="card-text">
-                                Plugin de mise à jour en temps réel du score, affichage dynamique des classements.<br>
-                                Interfaces personnalisées pour les utilisateurs et les administrateurs dans CTFd.
+                                Mise en place d’un système sécurisé : isolation des conteneurs Docker, VPN, configuration des accès restreints.
+
+                                Sécurisation de la base de données, des tokens (SECRET_KEY) et sensibilisation à la gestion des identifiants et permissions.
                             </p>
                         </div>
                     </div>
@@ -138,67 +147,11 @@
                 <div class="col-md-3">
                     <div class="card card-custom-bg h-100">
                         <div class="card-body">
-                            <h5 class="card-title">AC 4 : Manipuler des données hétérogènes</h5>
+                            <h5 class="card-title">AC4:Évaluer l’impact environnemental et sociétal des solutions proposées</h5>
                             <p class="card-text">
-                                Informations utilisateurs (texte, scores, rôles).<br>
-                                Fichiers de défis (zip, binaire, image...).<br>
-                                Logs techniques et résultats d’analyse.<br>
-                                JSON (pour les APIs de plugins).<br>
-                                Webhook Discord.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <br>
-        <section class="container">
-            <h2 class="text-secondary mb-3">Compétence 2: Optimiser des applications</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="card card-custom-bg h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">AC 1 : Optimiser les modèles de données de l’entreprise</h5>
-                            <p class="card-text">
-                                Adaptation du schéma de CTFd pour gérer les événements, équipes, scores et nouveaux types de plugins.<br>
-                                Travail sur les relations utilisateurs/défis/réponses pour faciliter la recherche et l’analyse.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card card-custom-bg h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">AC 2 : Assurer la confidentialité des données</h5>
-                            <p class="card-text">
-                                RGPD respecté : consentement, suppression de compte, droits des utilisateurs.<br>
-                                Sécurisation des mots de passe, des connexions et des logs.<br>
-                                Hébergement sur serveur personnel avec backups et cloisonnement.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card card-custom-bg h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">AC 3 : Organiser la restitution de données</h5>
-                            <p class="card-text">
-                                Plugin de mise à jour en temps réel du score, affichage dynamique des classements.<br>
-                                Interfaces personnalisées pour les utilisateurs et les administrateurs dans CTFd.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card card-custom-bg h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">AC 4 : Manipuler des données hétérogènes</h5>
-                            <p class="card-text">
-                                Informations utilisateurs (texte, scores, rôles).<br>
-                                Fichiers de défis (zip, binaire, image...).<br>
-                                Logs techniques et résultats d’analyse.<br>
-                                JSON (pour les APIs de plugins).<br>
-                                Webhook Discord.
+                                CTF+Z est hébergé sur un VPS mutualisé, minimisant les ressources.
+
+                                Le projet sensibilise à la cybersécurité auprès du grand public : impact sociétal positif en diffusant de bonnes pratiques numériques.
                             </p>
                         </div>
                     </div>
@@ -207,15 +160,54 @@
         </section>
         <br>
         <section class="container">
-            <h2 class="text-secondary mb-3">Compétence 2: Optimiser des applications</h2>
+            <h2 class="text-secondary mb-3">Compétence 3: Administrer des systèmes informatiques communicants complexes</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card card-custom-bg h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">AC1:Concevoir et développer des applications communicantes</h5>
+                            <p class="card-text">
+                                La plateforme utilise des services web interconnectés (frontend CTFd, base MySQL, plugins web, Discord Webhook).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-custom-bg h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">AC 2 : Utiliser des serveurs et des services réseaux virtualisés</h5>
+                            <p class="card-text">
+                                Déploiement complet sur un VPS via Docker/Docker Compose.
+
+                                Chaque type de défi tourne dans un conteneur isolé, pratique classique en CTF.
+
+                                Utilisation d’un VPN pour créer un réseau sécurisé virtualisé entre les participants et les serveurs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-custom-bg h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">AC 3 : Sécuriser les services et données d’un système</h5>
+                            <p class="card-text">
+                                Mise en place de pare-feux, cloisonnement des services, gestion des ports, et conformité RGPD (stockage, consentement, droits des utilisateurs).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class="container">
+            <h2 class="text-secondary mb-3">Compétence 4: Gérer des données de l’information</h2>
             <div class="row g-4">
                 <div class="col-md-3">
                     <div class="card card-custom-bg h-100">
                         <div class="card-body">
                             <h5 class="card-title">AC 1 : Optimiser les modèles de données de l’entreprise</h5>
                             <p class="card-text">
-                                Adaptation du schéma de CTFd pour gérer les événements, équipes, scores et nouveaux types de plugins.<br>
-                                Travail sur les relations utilisateurs/défis/réponses pour faciliter la recherche et l’analyse.
+                                Adaptation du schéma de CTFd pour gérer les événements, équipes, scores et nouveaux types de plugins.
                             </p>
                         </div>
                     </div>
@@ -225,8 +217,10 @@
                         <div class="card-body">
                             <h5 class="card-title">AC 2 : Assurer la confidentialité des données</h5>
                             <p class="card-text">
-                                RGPD respecté : consentement, suppression de compte, droits des utilisateurs.<br>
-                                Sécurisation des mots de passe, des connexions et des logs.<br>
+                                RGPD respecté : consentement, suppression de compte, droits des utilisateurs.
+
+                                Sécurisation des mots de passe, des connexions et des logs.
+
                                 Hébergement sur serveur personnel avec backups et cloisonnement.
                             </p>
                         </div>
@@ -237,7 +231,6 @@
                         <div class="card-body">
                             <h5 class="card-title">AC 3 : Organiser la restitution de données</h5>
                             <p class="card-text">
-                                Plugin de mise à jour en temps réel du score, affichage dynamique des classements.<br>
                                 Interfaces personnalisées pour les utilisateurs et les administrateurs dans CTFd.
                             </p>
                         </div>
@@ -265,7 +258,7 @@
 <footer class="bg-white py-4 mt-auto">
     <div class="container px-5">
         <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-            <div class="col-auto"><div class="small m-0">Copyright &copy; Website 2025</div></div>
+            <div class="col-auto"><div class="small m-0">Badis saad &copy; Copyright 2025</div></div>
             <div class="d-flex justify-content-center fs-2 gap-4">
                 <a class="text-gradient" href="contact.html"><i class="bi bi-envelope"></i></a>
                 <a class="text-gradient" href="https://www.linkedin.com/in/badis-saad"><i class="bi bi-linkedin"></i></a>
