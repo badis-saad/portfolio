@@ -42,7 +42,11 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="mb-3 text-gradient fw-bold">SAE Réseau Système 2024</h2>
-
+                    <p class="text-muted">
+                        <video width="100%" controls>
+                            <source src="../assets/SAEReseauSysteme/instalation%20LAMP%20et%20outro.mp4" type="video/mp4">
+                        </video>
+                    </p>
                     <h3 class="text-secondary mb-3">Résumé</h3>
                     <p class="text-muted">
                         Ce projet a consisté à installer et configurer la pile LAMP (Linux, Apache, MySQL, PHP) sur une machine virtuelle Ubuntu via VirtualBox. L’objectif était d’obtenir un environnement complet de développement web, sécurisé et fonctionnel, simulant un serveur réel, dans un cadre pédagogique. Ce guide opérationnel permet à tout utilisateur de reproduire cette configuration étape par étape, de la création de la machine virtuelle à la vérification finale des services. Ce projet met en œuvre des compétences en administration système, en déploiement de services réseau et en sécurisation d’environnement.
@@ -91,6 +95,45 @@
                             Ce projet m’a permis de consolider mes compétences en ligne de commande, en virtualisation, en sécurisation de services réseau, et en documentation technique. L’approche pas-à-pas m’a appris à diagnostiquer les erreurs courantes, à structurer une installation propre, et à réfléchir à la maintenance future d’un environnement serveur.
                         </li>
                     </ul>
+                    <section>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h2 class="text-primary fw-bolder mb-0">Rendu du projet</h2>
+                            <div>
+                                <a class="btn btn-primary px-4 py-3 me-2" href="../assets/SAEReseauSysteme/Explication_installation_LAMP.pdf" download>
+                                    <div class="d-inline-block bi bi-download me-2"></div>
+                                    Download
+                                </a>
+                                <button class="btn btn-outline-primary px-4 py-3" id="previewPdfBtn">
+                                    <i class="bi bi-eye me-2"></i>Prévisualiser
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Modal de prévisualisation PDF -->
+                        <div class="modal fade" id="pdfPreviewModal" tabindex="-1" aria-labelledby="pdfPreviewModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="pdfPreviewModalLabel">Prévisualisation du PDF</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                                    </div>
+                                    <div class="modal-body" style="height:80vh;">
+                                        <iframe src="../assets/SAEReseauSysteme/Explication_installation_LAMP.pdf" style="width:100%;height:100%;" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var previewBtn = document.getElementById('previewPdfBtn');
+                                if (previewBtn) {
+                                    previewBtn.addEventListener('click', function() {
+                                        var modal = new bootstrap.Modal(document.getElementById('pdfPreviewModal'));
+                                        modal.show();
+                                    });
+                                }
+                            });
+                        </script>
+                    </section>
 
                 </div>
             </div>
