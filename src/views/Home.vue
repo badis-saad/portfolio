@@ -10,7 +10,7 @@
 
           <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
             Architecte SI<br />
-            <span class="text-slate-300">en construction</span>
+            <span class="text-slate-300">en étude</span>
           </h1>
 
           <p class="text-slate-300 max-w-xl leading-relaxed">
@@ -18,7 +18,7 @@
             Ce portfolio reflète la maîtrise technique et la structure réfléchie des projets.
           </p>
 
-          <div class="flex gap-5 pt-4">
+          <div class="flex gap-5 pt-4 flex-wrap">
             <a
               :href="cvFile"
               download
