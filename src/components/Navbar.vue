@@ -1,9 +1,17 @@
 <template>
   <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-700">
     <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <RouterLink to="/" class="flex flex-col leading-none">
-        <span class="text-lg font-semibold text-slate-50 hover:text-lime-400 transition">Badis Saad</span>
-        <span class="text-xs uppercase text-slate-300 mt-1">Architecte SI</span>
+      <RouterLink to="/" class="flex items-center gap-3">
+        <img src="@/assets/logo.png" alt="Logo Badis Saad" class="w-10 h-10" />
+
+        <div class="flex flex-col leading-tight">
+          <span class="text-lg font-semibold text-slate-50 hover:text-lime-400 transition">
+            Badis Saad
+          </span>
+          <span class="text-xs uppercase text-slate-300 mt-0.5">
+            Architecte SI
+          </span>
+        </div>
       </RouterLink>
 
       <ul class="hidden md:flex items-center gap-12 text-sm font-medium text-slate-300">
