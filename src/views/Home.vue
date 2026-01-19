@@ -20,7 +20,7 @@
 
           <div class="flex gap-5 pt-4">
             <a
-              href="/cv.pdf"
+              :href="cvFile"
               download
               class="px-8 py-3 rounded-xl bg-lime-400 text-slate-900 font-medium hover:bg-lime-300 transition shadow-lg"
             >
@@ -57,7 +57,19 @@
         </p>
       </div>
     </section>
+    <section class="max-w-5xl mx-auto px-6 pb-32">
+      <div class="border-l-4 border-lime-400 pl-6">
+        <h2 class="text-2xl font-semibold text-slate-50 mb-4">À propos de moi</h2>
+        <p class="text-slate-300 leading-relaxed">
+          Étudiant informatique et rôliste passionné de lecture. Je lis vos besoins. Je code votre solution. Et je fais une réussite critique avec vous !!!
+          Au fil de mon parcours, j'ai eu l'opportunité de découvrir de nombreuses compétences et méthodes de travail incroyables. J'ai appris à maîtriser des frameworks, des langages de programmation, des outils de travail et des méthodes de gestion d'équipe.
+          Dans un avenir proche, j'espère continuer à avancer avec vous sur le chemin de la découverte et de l'innovation.
+        </p>
+      </div>
+    </section>
   </main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import cvFile from '@/assets/SAAD-Badis-CV.pdf'
+</script>
