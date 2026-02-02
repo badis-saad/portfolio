@@ -52,7 +52,7 @@ import { ref } from 'vue'
 const open = ref(false)
 const links = [
   { label: 'Résumé', to: '/resume' },
-  { label: 'Projets', to: '/projets' },
+  { label: 'Projets', to: '/projects' },
   { label: 'Portfolio d’apprentissage', to: '/apprentissage' },
   { label: 'Contact', to: '/contact' }
 ]
