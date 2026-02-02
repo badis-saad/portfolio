@@ -28,7 +28,7 @@
           <!-- GitHub -->
           <div class="flex flex-col items-center">
             <p class="text-lime-400 font-medium">GitHub</p>
-            <a href="https://github.com/badis-saadl" target="_blank" class="hover:text-lime-300 transition">
+            <a href="https://github.com/badis-saad" target="_blank" class="hover:text-lime-300 transition">
               <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                 <path
                   d="M12 0.5C5.73 0.5.75 5.7.75 12.3c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.34.8-4.04-1.7-4.04-1.7-.55-1.5-1.34-1.9-1.34-1.9-1.1-.8.08-.8.08-.8 1.22.1 1.86 1.3 1.86 1.3 1.08 1.9 2.83 1.4 3.52 1.1.1-.8.42-1.4.76-1.7-2.67-.3-5.47-1.4-5.47-6.2 0-1.4.47-2.6 1.24-3.5-.12-.3-.54-1.6.12-3.4 0 0 1.02-.3 3.34 1.3a11.3 11.3 0 0 1 6.08 0c2.32-1.6 3.34-1.3 3.34-1.3.66 1.8.24 3.1.12 3.4.77.9 1.24 2.1 1.24 3.5 0 4.8-2.8 5.9-5.48 6.2.44.4.82 1.1.82 2.3v3.4c0 .3.2.7.8.6 4.76-1.6 8.2-6.1 8.2-11.4C23.25 5.7 18.27.5 12 .5z"
