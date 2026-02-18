@@ -9,7 +9,7 @@
           <p class="uppercase tracking-widest text-lime-400 font-medium">Portfolio Personnel</p>
 
           <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
-            Architecte SI<br />
+            Urbaniste SI<br />
             <span class="text-slate-300">en étude</span>
           </h1>
 

@@ -1,81 +1,69 @@
 <template>
-  <article
-    @click="goToProject"
-    class="bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden
-           hover:border-lime-400 hover:-translate-y-1 transition
-           cursor-pointer flex flex-col"
+  <div
+    @click="openProject"
+    class="cursor-pointer bg-slate-800 rounded-xl overflow-hidden shadow hover:shadow-lg transition"
   >
-    <!-- IMAGE -->
-    <div class="relative h-48 w-full overflow-hidden">
+    <!-- Image -->
+    <div class="w-full h-48 bg-gray-700">
       <img
-        :src="image || defaultImage"
-        alt="Image du projet"
+        v-if="image"
+        :src="image"
+        alt="Project image"
         class="w-full h-full object-cover"
       />
-
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent"></div>
-
-      <!-- TITRE -->
-      <h3 class="absolute bottom-4 left-4 text-xl font-semibold text-slate-50">
-        {{ title }}
-      </h3>
+      <div v-else class="w-full h-full flex items-center justify-center text-slate-400">
+        Pas d'image
+      </div>
     </div>
 
-    <!-- CONTENU -->
-    <div class="p-6 flex flex-col gap-4 flex-1">
-      <!-- Description -->
-      <p class="text-slate-300 text-sm leading-relaxed">
-        {{ description }}
-      </p>
+    <!-- Contenu -->
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-slate-50 mb-2">{{ title }}</h3>
+      <p class="text-slate-300 text-sm mb-4 line-clamp-3">{{ description }}</p>
 
-      <!-- TAGS -->
-      <div class="mt-auto flex flex-wrap gap-2">
-        <!-- Équipe -->
-        <span class="tag tag-team">
-          👥 {{ teamSize }}
-        </span>
-
-        <!-- Type -->
-        <span class="tag tag-type">
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-lime-400 text-slate-900 rounded-full px-2 py-1 text-xs font-medium">
           {{ type }}
         </span>
-
-        <!-- Technos -->
+        <span class="bg-sky-400 text-slate-900 rounded-full px-2 py-1 text-xs font-medium">
+          {{ teamSize }} pers.
+        </span>
         <span
           v-for="tech in technologies"
           :key="tech"
-          class="tag tag-tech"
+          class="bg-purple-400 text-slate-900 rounded-full px-2 py-1 text-xs font-medium"
         >
           {{ tech }}
         </span>
       </div>
     </div>
-  </article>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import defaultImage from '@/assets/project-default.jpg'
-
-const router = useRouter()
 
 interface Props {
   title: string
   description: string
   image?: string
-  teamSize: number | string
-  type: 'Personnel' | 'Professionnel' | 'Universitaire'
+  teamSize: number
+  type: string
   technologies: string[]
   slug: string
+  detailedDescription?: string
+  technicalDetails?: string
+  learned?: string
+  sources?: string[]
+  extraImages?: string[]
 }
 
 const props = defineProps<Props>()
+const router = useRouter()
 
-function goToProject() {
-  router.push(`/projects/${props.slug}`)
+function openProject() {
+  // Passer toutes les infos au composant ProjectDetail via state ou params
+  router.push({ name: 'project-detail', params: { slug: props.slug }, state: props })
 }
 </script>
-
-<style scoped>
-</style>
