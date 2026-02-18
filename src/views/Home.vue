@@ -27,7 +27,7 @@
               Télécharger le CV
             </a>
             <RouterLink
-              to="/projets"
+              to="/projects"
               class="px-8 py-3 rounded-xl border border-slate-700 text-slate-50 hover:border-lime-400 hover:text-lime-400 transition"
             >
               Projets
