@@ -196,17 +196,47 @@ interface Project {
 
 const projects = ref<Project[]>([
   {
-    title: 'Portfolio',
-    description: 'Portfolio moderne développé avec Vue 3 et Tailwind.',
+    title: "Very Bad Click – Code Game Jam 2026",
+    description: "Jeu de survie développé en équipe lors de la 10e édition de la Code Game Jam. Conception du système central de fusibles et de réactivation du panneau électrique.",
     image: defaultImage,
-    teamSize: 1,
-    type: 'Personnel',
-    technologies: ['Vue', 'Tailwind'],
-    extraImages: [defaultImage],
-    detailedDescription: 'Description complète du portfolio.',
-    technicalDetails: 'Vue 3 + Composition API + Tailwind.',
-    learned: 'Structuration avancée et architecture propre.',
-    sources: ['https://github.com/username/portfolio'],
+    teamSize: 7,
+    type: "Game Jam",
+    technologies: ["C#", "Godot", "Git", "Game Design"],
+    extraImages: [],
+    detailedDescription: `
+Projet réalisé lors de la 10e édition de la Code Game Jam.
+
+Après une phase de brainstorming collectif, nous avons conçu un jeu de survie dans lequel le joueur doit récupérer des fusibles dispersés dans une salle plongée dans l’obscurité afin de réactiver un panneau électrique et relancer la fête.
+
+Ma contribution principale a porté sur la mécanique centrale du jeu :
+- Conception et implémentation du système de fusibles (ramassage, transport, dépôt).
+- Développement du panneau électrique interactif.
+- Gestion de la logique de validation (nombre de fusibles requis).
+- Activation du système de lumière une fois le panneau réparé.
+
+Cette fonctionnalité constitue le cœur du gameplay : récupérer les éléments nécessaires, réparer le panneau et restaurer l’électricité.
+  `,
+    technicalDetails: `
+Développement en C# sous Godot.
+
+Implémentation :
+- Système d’interaction joueur-objet (détection, récupération, dépôt).
+- Gestion d’état du panneau électrique (incomplet, réparé, activé).
+- Logique conditionnelle déclenchant la remise en lumière de la scène.
+- Communication entre objets via signaux et scripts Godot.
+- Tests et ajustements pour assurer la stabilité en contexte de game jam.
+
+Exports Windows et Linux.
+  `,
+    learned: `
+Conception d’une mécanique gameplay centrale de bout en bout.
+Structuration d’un système basé sur des états et des conditions.
+Travail collaboratif dans un environnement multi-rôles (dev, graphisme, sound design).
+Gestion du temps et priorisation des fonctionnalités essentielles.
+  `,
+    sources: [
+      "https://milwenn.itch.io/very-bad-click"
+    ],
     featured: true,
     order: 1
   },
@@ -254,32 +284,96 @@ const projects = ref<Project[]>([
     ]
   },
   {
-    title: 'Application Universitaire',
-    description: 'Projet académique collaboratif.',
+    title: "MyAvatar – Clone Gravatar avec Symfony",
+    description: "Application web server-side développée avec Symfony permettant d’associer une adresse email à un avatar accessible via un hash SHA256.",
     image: defaultImage,
-    teamSize: 3,
-    type: 'Universitaire',
-    technologies: ['Java', 'SQL'],
-    extraImages: [defaultImage, defaultImage],
-    detailedDescription: 'Application développée en équipe.',
-    technicalDetails: 'Java backend + base SQL.',
-    learned: 'Travail en équipe et gestion Git.',
-    sources: [],
+    teamSize: 4,
+    type: "Universitaire",
+    technologies: ["PHP", "Symfony", "Twig", "MySQL", "JavaScript", "AJAX"],
+    extraImages: [],
+    detailedDescription: `
+Projet réalisé en équipe de quatre dans le cadre d’un module Symfony.
+
+L’objectif était de développer une application web inspirée de Gravatar, permettant d’associer une image de profil à une adresse email.
+
+Fonctionnalités principales :
+- Inscription avec login, mot de passe, email et photo de profil optionnelle.
+- Espace privé permettant de visualiser, modifier ou supprimer son avatar.
+- Modification sécurisée des informations (email, mot de passe) avec validation par mot de passe actuel.
+- Suppression de compte.
+- Vérification en temps réel de l’unicité du login et de l’email via JavaScript et requêtes AJAX.
+- Accès public aux avatars via une route /avatar/{hash} basée sur un hash SHA256 de l’email.
+- Image par défaut si l’utilisateur n’existe pas ou n’a pas d’avatar.
+- Possibilité de masquer/démasquer son profil dynamiquement (AJAX).
+- Hébergement sur le serveur de l’IUT.
+  `,
+    technicalDetails: `
+Mes contributions principales :
+
+- Setup complet du projet Symfony (configuration environnement, base de données, structure).
+- Développement du système d’inscription.
+- Implémentation de l’édition des informations utilisateur (Read & Update).
+- CRUD complet de l’avatar (upload, stockage sécurisé hors dossier public, suppression).
+- Implémentation de la route /avatar/{hash} avec génération SHA256 et retour d’image via BinaryFileResponse.
+- Gestion de la mise à jour du hash en cas de modification d’email.
+- Mise en place de l’hébergement sur le serveur IUT (FTP, SSH, composer install, droits d’écriture).
+
+Architecture :
+- Server-side rendering avec Twig.
+- Doctrine ORM pour la gestion des entités.
+- JavaScript natif pour les requêtes AJAX (unicité login/email, masquage profil).
+- Sécurisation de l’accès aux fichiers via contrôleurs Symfony.
+  `,
+    learned: `
+Approfondissement de Symfony (sécurité, formulaires, événements, rôles).
+Gestion complète d’un cycle CRUD sécurisé.
+Manipulation de hash SHA256 et logique d’accès conditionnel.
+Déploiement et configuration serveur (droits, installation dépendances).
+Travail collaboratif structuré avec Git.
+  `,
+    sources: ['https://webinfo.iutmontp.univ-montp2.fr/~saadb/r5.d.04-my-avatar/public/login',
+      'https://gitlabinfo.iutmontp.univ-montp2.fr/saadb/r5.d.04-my-avatar'],
     featured: true,
     order: 3
   },
   {
-    title: 'Portfolio',
-    description: 'Portfolio moderne développé avec Vue 3 et Tailwind.',
+    title: "Nuit de l’Info 2025 – Application NIRD",
+    description: "Développement en équipe d’une application web en une nuit autour du Numérique Inclusif, Responsable et Durable (NIRD).",
     image: defaultImage,
-    teamSize: 1,
-    type: 'Personnel',
-    technologies: ['Vue', 'Tailwind'],
+    teamSize: 6,
+    type: "Universitaire",
+    technologies: ["Vue.js", "JavaScript", "HTML", "CSS", "Git"],
     extraImages: [defaultImage],
-    detailedDescription: 'Description complète du portfolio.',
-    technicalDetails: 'Vue 3 + Composition API + Tailwind.',
-    learned: 'Structuration avancée et architecture propre.',
-    sources: ['https://github.com/username/portfolio'],
+    detailedDescription: `
+Projet réalisé lors de la Nuit de l’Info 2025 à Montpellier, en équipe de six développeurs.
+
+L’objectif était de concevoir en une seule nuit une application web complète autour du Numérique Inclusif, Responsable et Durable.
+
+Mes contributions :
+- Conception et développement d’une barre de navigation circulaire interactive.
+- Création d’un effet de texte cinématique (animation d’écriture) sur la page d’accueil.
+- Intégration et harmonisation du code développé par l’équipe.
+- Débogage collaboratif et optimisation du rendu final sous contrainte de temps.
+- Participation à un défi de visualisation sonore pour enrichir l’expérience utilisateur.
+
+Le projet a été conçu, développé et stabilisé en moins de 12 heures.
+  `,
+    technicalDetails: `
+Architecture front-end en Vue.js avec composants réutilisables.
+Structuration modulaire du code pour faciliter l’intégration des différentes parties développées par l’équipe.
+Gestion des animations en JavaScript et CSS.
+Travail collaboratif via Git avec fusion et résolution de conflits.
+Optimisation du rendu et corrections de bugs avant livraison finale.
+  `,
+    learned: `
+Renforcement du travail en équipe sous pression.
+Amélioration des compétences en intégration et harmonisation de code multi-contributeurs.
+Gestion efficace du temps sur un projet à contrainte forte.
+Expérimentation créative autour des animations et de la visualisation dynamique.
+  `,
+    sources: [
+      "https://lnkd.in/etZHNgyP"
+    ],
     featured: true,
     order: 4
   },
