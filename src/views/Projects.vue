@@ -185,7 +185,6 @@ interface Project {
   teamSize: number
   type: string
   technologies: string[]
-  slug: string
   extraImages?: string[]
   detailedDescription?: string
   technicalDetails?: string
@@ -196,14 +195,13 @@ interface Project {
 }
 
 const projects = ref<Project[]>([
-  {
+  /*{
     title: 'Portfolio',
     description: 'Portfolio moderne développé avec Vue 3 et Tailwind.',
     image: defaultImage,
     teamSize: 1,
     type: 'Personnel',
     technologies: ['Vue', 'Tailwind'],
-    slug: 'portfolio',
     extraImages: [defaultImage],
     detailedDescription: 'Description complète du portfolio.',
     technicalDetails: 'Vue 3 + Composition API + Tailwind.',
@@ -213,36 +211,112 @@ const projects = ref<Project[]>([
     order: 1
   },
   {
-    title: 'Application Universitaire',
-    description: 'Projet académique collaboratif.',
-    image: defaultImage,
-    teamSize: 3,
-    type: 'Universitaire',
-    technologies: ['Java', 'SQL'],
-    slug: 'app-universitaire',
-    extraImages: [defaultImage, defaultImage],
-    detailedDescription: 'Application développée en équipe.',
-    technicalDetails: 'Java backend + base SQL.',
-    learned: 'Travail en équipe et gestion Git.',
-    sources: [],
-    featured: true,
-    order: 2
-  },
-  {
     title: 'API Backend',
     description: 'API REST sécurisée.',
     image: defaultImage,
     teamSize: 2,
     type: 'Professionnel',
     technologies: ['Node', 'MongoDB'],
-    slug: 'api-backend',
     extraImages: [defaultImage],
     detailedDescription: 'API sécurisée avec authentification.',
     technicalDetails: 'Node + Express + JWT.',
     learned: 'Architecture backend sécurisée.',
     sources: ['https://github.com/username/api-backend'],
     featured: true,
+    order: 2
+  },
+  {
+    title: 'Application Universitaire',
+    description: 'Projet académique collaboratif.',
+    image: defaultImage,
+    teamSize: 3,
+    type: 'Universitaire',
+    technologies: ['Java', 'SQL'],
+    extraImages: [defaultImage, defaultImage],
+    detailedDescription: 'Application développée en équipe.',
+    technicalDetails: 'Java backend + base SQL.',
+    learned: 'Travail en équipe et gestion Git.',
+    sources: [],
+    featured: true,
     order: 3
+  },
+  {
+    title: 'Portfolio',
+    description: 'Portfolio moderne développé avec Vue 3 et Tailwind.',
+    image: defaultImage,
+    teamSize: 1,
+    type: 'Personnel',
+    technologies: ['Vue', 'Tailwind'],
+    extraImages: [defaultImage],
+    detailedDescription: 'Description complète du portfolio.',
+    technicalDetails: 'Vue 3 + Composition API + Tailwind.',
+    learned: 'Structuration avancée et architecture propre.',
+    sources: ['https://github.com/username/portfolio'],
+    featured: true,
+    order: 4
+  },
+  */
+  {
+    title: 'CTF+Z',
+    description: 'Dans le cadre d’un projet de mise en application d’un Capture The Flag (CTF) pour un client en 2024, j’ai occupé le rôle de Scrum Master et été responsable de l’infrastructure.',
+    image: defaultImage,
+    teamSize: 4,
+    type: 'Universitaire',
+    technologies: ['CTFd (framework CTF)', 'Python', 'Docker', 'Discord API', 'Flask', 'MySQL', 'HTML/CSS', 'GitLab'],
+    extraImages: [defaultImage],
+    detailedDescription: 'CTF+Z est une plateforme CTF destinée à sensibiliser un large public à la cybersécurité via des défis interactifs. Elle se veut conviviale, accessible et sécurisée. Les utilisateurs peuvent participer seuls ou en équipe à des événements regroupant plusieurs types de challenges. Le tout repose sur CTFd, enrichi de personnalisations répondant aux besoins précis de l’association cliente. Ce projet a été réalisé dans le cadre du BUT Informatique (année 2), en partenariat avec l’association Yggame. Il s’inscrit dans une SAE mobilisant les compétences de développement d’applications, d’administration système, d’optimisation logicielle et de conduite de projet.',
+    technicalDetails: 'Durée\n' +
+      '4 mois : de septembre 2024 à décembre 2024, répartis en 5 sprints selon la méthode agile Scrum, avec une livraison finale en janvier.\n' +
+      '\nLe projet a été mené en utilisant la méthode Agile pour la planification et l’organisation de l’équipe. J’ai travaillé avec Docker Compose pour la gestion de l’infrastructure et un framework Python (CTFd) pour le développement du site CTF. Mon rôle a également consisté à ajouter les fonctionnalités demandées par le client, tout en assurant la coordination et la gestion des tâches de l’équipe.',
+    learned: 'Mes missions principales\n' +
+      'Configuration technique\n' +
+      'J’ai pris en charge toute l’installation et configuration de Docker et Docker Compose pour déployer la plateforme CTFd sur le VPS du client.\n' +
+      'J’ai intégré les outils de sécurité comme docker compose, en garantissant l’isolation des défis via des conteneurs.\n' +
+      'Déploiement\n' +
+      'Mise en place d’un environnement serveur sécurisé et scalable.\n' +
+      'Configuration du fichier docker-compose.yml, des volumes et des variables d’environnement sensibles.\n' +
+      'Liaison avec la base de données via config.ini.\n' +
+      'Création de plugins\n' +
+      'J’ai développé un plugin Discord notifier (CTFd_chat_notifier) permettant d’envoyer automatiquement une alerte lorsqu’un défi est réussi.\n' +
+      'Participation à l’intégration d’un plugin de pénalité en cas de mauvaise réponse (incorrect_penalty_challenges), en Python et JavaScript.\n' +
+      'Scrum Master\n' +
+      'Organisation de réunions hebdomadaires pour améliorer la communication d’équipe après un sprint difficile.\n' +
+      'Suivi des tâches sur GitLab, gestion des priorités, coordination des merges.\n' +
+      'Support technique auprès des coéquipiers en cas de blocage sur l’environnement.',
+    sources: [],
+    featured: true,
+    order: 4
+  },
+  {
+    title: 'Nuit de l\'info 2024',
+    description: '#Concours national · #Équipe de 6\n' +
+      'La Nuit de l\'Info 2024 a été une expérience intense et enrichissante, s’étendant de 16h39 jusqu’à 8h04 le lendemain matin, sur le thème « L’eau et le corps humain ». Notre équipe de six membres a conçu un site web pédagogique en un temps limité, en utilisant un framework tel que Symfony.',
+    image: defaultImage,
+    teamSize: 6,
+    type: 'Universitaire',
+    technologies: ['Symfony', 'JS'],
+    extraImages: [defaultImage],
+    detailedDescription: 'De mon côté je me suis occupé de la page dark UX du podcast en utilisant javascript. Et j’ai collaboré avec mon équipe pour concevoir la page principale. Et j\'ai poursuivi cette collaboration en fusionnant 2 fonctionnalités de mon équipe. La collaboration a été un élément clé de notre réussite. Chaque membre a mis à profit ses compétences spécifiques, qu’il s’agisse de programmation, de design ou de gestion de projet. Travailler dans une contrainte temporelle aussi forte nous a appris à prioriser les tâches de manière efficace et à gérer notre temps avec rigueur. Ce thème stimulant nous a encouragés à faire preuve de créativité pour proposer des solutions innovantes et sensibiliser les utilisateurs de manière éducative.',
+    technicalDetails: 'Le projet a été développé en utilisant Symfony pour le backend, avec une architecture MVC bien définie. Le frontend a été réalisé avec JavaScript pour créer une expérience utilisateur interactive et engageante. Nous avons également utilisé des outils de gestion de projet pour coordonner nos efforts et assurer une communication fluide au sein de l’équipe.',
+    learned: 'Cette expérience m’a permis de renforcer mes compétences en développement web, de travailler efficacement en équipe et de gérer un projet dans des conditions de temps limitées. J’ai également appris à faire preuve de créativité pour répondre à un thème donné et à collaborer avec des personnes aux compétences diverses pour atteindre un objectif commun.',
+    sources: ['https://ndi2024.jumperboost.fr'],
+    featured: true,
+    order: 6
+  },
+  {
+    title: 'Code Game Jam Janvier 2024',
+    description: 'Lors de la 8ᵉ édition de la Code Game Jam en janvier 2024, j’ai participé à un événement intensif de 30 heures pour créer un jeu vidéo.',
+    image: defaultImage,
+    teamSize: 6,
+    type: 'Universitaire',
+    technologies: ['LUA', 'LOVE2D'],
+    extraImages: [defaultImage],
+    detailedDescription: 'Lors de la 8ᵉ édition de la Code Game Jam en janvier 2024, j’ai participé à un événement intensif de 30 heures pour créer un jeu vidéo en utilisant le langage de programmation LUA.',
+    technicalDetails: 'LOVE2D pour le développement du jeu, avec une architecture orientée objet pour gérer les différentes entités du jeu. Le projet a été réalisé en équipe de 6 personnes, nécessitant une coordination efficace et une gestion du temps rigoureuse pour respecter les délais serrés de la jam.',
+    learned: 'Ce projet m’a permis de travailler en équipe, d’appliquer ma créativité dans un cadre limité et de perfectionner ma gestion du temps, tout en développant un jeu interactif et fonctionnel.',
+    sources: ['https://arqaurelien.itch.io/eggdrasil'],
+    featured: true,
+    order: 7
   }
 ])
 
