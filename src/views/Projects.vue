@@ -195,7 +195,7 @@ interface Project {
 }
 
 const projects = ref<Project[]>([
-  /*{
+  {
     title: 'Portfolio',
     description: 'Portfolio moderne développé avec Vue 3 et Tailwind.',
     image: defaultImage,
@@ -211,19 +211,47 @@ const projects = ref<Project[]>([
     order: 1
   },
   {
-    title: 'API Backend',
-    description: 'API REST sécurisée.',
+    title: 'API Backend Neo4j',
+    description: 'API REST développée en Spring Boot pour interagir avec une base de données graphe Neo4j via le langage Cypher.',
     image: defaultImage,
-    teamSize: 2,
-    type: 'Professionnel',
-    technologies: ['Node', 'MongoDB'],
-    extraImages: [defaultImage],
-    detailedDescription: 'API sécurisée avec authentification.',
-    technicalDetails: 'Node + Express + JWT.',
-    learned: 'Architecture backend sécurisée.',
-    sources: ['https://github.com/username/api-backend'],
+    teamSize: 1,
+    type: 'Personnel',
+    technologies: ['Java', 'Spring Boot', 'Neo4j', 'Cypher', 'REST API'],
     featured: true,
-    order: 2
+    order: 2,
+
+    extraImages: [defaultImage],
+
+    detailedDescription: `
+  Projet personnel réalisé en autonomie dans le but de découvrir une base de données non relationnelle orientée graphe : Neo4j.
+
+  L’objectif était de comprendre la logique des bases en nœuds et relations, ainsi que le langage de requête Cypher, très différent du SQL traditionnel.
+
+  Pour exploiter cette base de données, j’ai développé une API REST en Java avec Spring Boot afin de créer une couche d’abstraction propre et manipulable depuis un client externe.
+
+  Le projet a été réalisé sur une matinée dédiée à l’expérimentation et à la découverte technologique.
+  `,
+
+    technicalDetails: `
+  - Développement d’une API REST avec Spring Boot
+  - Connexion à une base Neo4j
+  - Utilisation du langage Cypher pour les requêtes
+  - Modélisation en nœuds et relations
+  - Tests des endpoints via Postman
+  - Architecture simple en couches (Controller / Service / Repository)
+  `,
+
+    learned: `
+  - Compréhension du fonctionnement des bases de données orientées graphe
+  - Différences fondamentales entre SQL relationnel et modèle graphe
+  - Manipulation du langage Cypher
+  - Intégration de Neo4j dans un projet Spring Boot
+  - Mise en place rapide d’une API REST propre en Java
+  `,
+
+    sources: [
+      'https://github.com/badis-saad/neo4j-java-api'
+    ]
   },
   {
     title: 'Application Universitaire',
@@ -255,7 +283,6 @@ const projects = ref<Project[]>([
     featured: true,
     order: 4
   },
-  */
   {
     title: 'CTF+Z',
     description: 'Dans le cadre d’un projet de mise en application d’un Capture The Flag (CTF) pour un client en 2024, j’ai occupé le rôle de Scrum Master et été responsable de l’infrastructure.',
