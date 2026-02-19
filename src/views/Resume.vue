@@ -199,6 +199,13 @@ const formations = ref<Formation[]>([
   },
   {
     id: 2,
+    period: '2025 – 2026',
+    title: 'Licence 3 – Management Technologies et Sciences eLEARNING',
+    type: 'Formation universitaire – IAE',
+    description:'La Licence 3 MTS eLearning est une formation généraliste et professionnalisante qui permet aux étudiants scientifiques et technologiques de développer des compétences en gestion, innovation et management.'
+  },
+  {
+    id: 3,
     period: '2021 – 2023',
     title: 'Baccalauréat STI2D',
     type: 'Formation secondaire',
