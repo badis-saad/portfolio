@@ -77,7 +77,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
           <div
             v-for="project in projects"
-            :key="project.slug"
+            :key="project.order"
             class="cursor-pointer"
             @click="openModal(project)"
           >
