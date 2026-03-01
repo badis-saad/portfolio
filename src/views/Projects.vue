@@ -35,9 +35,10 @@
 
           <!-- Carte centre -->
           <div
+            v-if="centerProject"
             class="absolute scale-100 opacity-100 z-20
-                   transition-all duration-500 ease-in-out cursor-pointer"
-            @click="centerProject && openModal(centerProject)"
+         transition-all duration-500 ease-in-out cursor-pointer"
+            @click="openModal(centerProject)"
           >
             <ProjectCard v-bind="centerProject" />
           </div>
