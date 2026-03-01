@@ -28,7 +28,7 @@
             v-if="leftProject"
             class="absolute -translate-x-80 scale-90 opacity-40 z-10
                    transition-all duration-500 ease-in-out cursor-pointer"
-            @click="openModal(leftProject)"
+            @click="leftProject && openModal(leftProject)"
           >
             <ProjectCard v-bind="leftProject" />
           </div>
@@ -37,7 +37,7 @@
           <div
             class="absolute scale-100 opacity-100 z-20
                    transition-all duration-500 ease-in-out cursor-pointer"
-            @click="openModal(centerProject)"
+            @click="centerProject && openModal(centerProject)"
           >
             <ProjectCard v-bind="centerProject" />
           </div>
@@ -47,7 +47,7 @@
             v-if="rightProject"
             class="absolute translate-x-80 scale-90 opacity-40 z-10
                    transition-all duration-500 ease-in-out cursor-pointer"
-            @click="openModal(rightProject)"
+            @click="rightProject && openModal(rightProject)"
           >
             <ProjectCard v-bind="rightProject" />
           </div>
@@ -452,18 +452,18 @@ const featuredProjects = computed(() =>
 const currentIndex = ref(0)
 const total = computed(() => featuredProjects.value.length)
 
-const centerProject = computed(() =>
-  featuredProjects.value[currentIndex.value]
-)
-
-const leftProject = computed(() => {
-  if (total.value < 2) return null
-  return featuredProjects.value[(currentIndex.value - 1 + total.value) % total.value]
+const centerProject = computed<Project | null>(() => {
+  return featuredProjects.value[currentIndex.value] ?? null
 })
 
-const rightProject = computed(() => {
+const leftProject = computed<Project | null>(() => {
   if (total.value < 2) return null
-  return featuredProjects.value[(currentIndex.value + 1) % total.value]
+  return featuredProjects.value[(currentIndex.value - 1 + total.value) % total.value] ?? null
+})
+
+const rightProject = computed<Project | null>(() => {
+  if (total.value < 2) return null
+  return featuredProjects.value[(currentIndex.value + 1) % total.value] ?? null
 })
 
 function next() {
@@ -482,7 +482,8 @@ function prev() {
 
 const selectedProject = ref<Project | null>(null)
 
-function openModal(project: Project) {
+function openModal(project: Project | null) {
+  if (!project) return
   selectedProject.value = project
 }
 
