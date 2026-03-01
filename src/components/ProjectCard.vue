@@ -51,12 +51,13 @@ interface Props {
   teamSize: number
   type: string
   technologies: string[]
-  slug: string
+  extraImages?: string[]
   detailedDescription?: string
   technicalDetails?: string
   learned?: string
   sources?: string[]
-  extraImages?: string[]
+  featured?: boolean
+  order: number
 }
 
 const props = defineProps<Props>()
