@@ -65,6 +65,6 @@ const router = useRouter()
 
 function openProject() {
   // Passer toutes les infos au composant ProjectDetail via state ou params
-  router.push({ name: 'project-detail', params: { slug: props.slug }, state: props })
+  router.push({ name: 'project-detail', params: {}, state: props })
 }
 </script>
