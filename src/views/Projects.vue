@@ -453,8 +453,16 @@ const featuredProjects = computed(() =>
 const currentIndex = ref(0)
 const total = computed(() => featuredProjects.value.length)
 
-const centerProject = computed<Project | null>(() => {
-  return featuredProjects.value[currentIndex.value] ?? null
+const centerProject = computed<Project>(() => {
+  const project = projects.value.find(
+    p => p.order === activeIndex.value
+  )
+
+  if (!project) {
+    throw new Error('Project not found')
+  }
+
+  return project
 })
 
 const leftProject = computed<Project | null>(() => {
