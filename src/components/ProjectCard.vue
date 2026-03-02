@@ -43,28 +43,12 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import type { Project } from '@/types/Project'
 
-interface Props {
-  title: string
-  description: string
-  image?: string
-  teamSize: number
-  type: string
-  technologies: string[]
-  extraImages?: string[]
-  detailedDescription?: string
-  technicalDetails?: string
-  learned?: string
-  sources?: string[]
-  featured?: boolean
-  order: number
-}
-
-const props = defineProps<Props>()
+const props = defineProps<Project>()
 const router = useRouter()
 
 function openProject() {
-  // Passer toutes les infos au composant ProjectDetail via state ou params
   router.push({ name: 'project-detail', params: {}, state: props })
 }
 </script>

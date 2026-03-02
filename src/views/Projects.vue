@@ -176,7 +176,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import ProjectCard from '@/components/ProjectCard.vue'
+import type { Project } from '@/types/Project.ts'
 import defaultImage from '@/assets/project-default.jpg'
 
 interface Project {
@@ -407,7 +407,7 @@ Expérimentation créative autour des animations et de la visualisation dynamiqu
       'Support technique auprès des coéquipiers en cas de blocage sur l’environnement.',
     sources: [],
     featured: true,
-    order: 4
+    order: 5
   },
   {
     title: 'Nuit de l\'info 2024',
