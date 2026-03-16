@@ -9,7 +9,7 @@
             Badis Saad
           </span>
           <span class="text-xs uppercase text-slate-300 mt-0.5">
-            Architecte SI
+            Développeur & Urbaniste SI
           </span>
         </div>
       </RouterLink>
