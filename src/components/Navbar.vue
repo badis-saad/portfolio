@@ -9,7 +9,7 @@
             Badis Saad
           </span>
           <span class="text-xs uppercase text-slate-300 mt-0.5">
-            Développeur & Urbaniste SI
+            Étudiant en informatique orienté systèmes d’information
           </span>
         </div>
       </RouterLink>
