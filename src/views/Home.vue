@@ -9,13 +9,12 @@
           <p class="uppercase tracking-widest text-lime-400 font-medium">Portfolio Personnel</p>
 
           <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
-            Développeur & Urbaniste SI<br />
+            Étudiant en informatique orienté systèmes d’information<br />
             <span class="text-slate-300">en étude</span>
           </h1>
 
           <p class="text-slate-300 max-w-xl leading-relaxed">
-            Passionné par la conception de systèmes d’information élégants et cohérents.
-            Ce portfolio reflète la maîtrise technique et la structure réfléchie des projets.
+            Étudiant en BUT Informatique et en L3 Management Technologies et Sciences, je construis un profil à l’interface entre développement, analyse fonctionnelle et gestion de projet SI. Ce portfolio présente les projets qui reflètent le mieux ma manière de travailler : comprendre un besoin, structurer une solution et contribuer à des réalisations cohérentes, utiles et bien pensées.
           </p>
 
           <div class="flex gap-5 pt-4 flex-wrap">
@@ -50,10 +49,7 @@
       <div class="border-l-4 border-lime-400 pl-6">
         <h2 class="text-2xl font-semibold text-slate-50 mb-4">Démarche et vision</h2>
         <p class="text-slate-300 leading-relaxed">
-          Mon objectif est d’élever chaque projet au rang d’architecture cohérente,
-          avec un accent sur la lisibilité, la maintenabilité et l’élégance technique.
-          Le fond sombre unifie l’ensemble de la page, tandis que les accents citron
-          soulignent les éléments interactifs et importants.
+          J’accorde une grande importance à la clarté, à la cohérence et à la compréhension du besoin. J’aime travailler sur des projets où la technique sert une logique plus large : organisation, usage, collaboration et structuration du système d’information. L’univers citron de ce portfolio reflète cette recherche d’identité visuelle, de lisibilité et de cohérence d’ensemble.
         </p>
       </div>
     </section>
@@ -61,9 +57,7 @@
       <div class="border-l-4 border-lime-400 pl-6">
         <h2 class="text-2xl font-semibold text-slate-50 mb-4">À propos de moi</h2>
         <p class="text-slate-300 leading-relaxed">
-          Étudiant informatique et rôliste passionné de lecture. Je lis vos besoins. Je code votre solution. Et je fais une réussite critique avec vous !!!
-          Au fil de mon parcours, j'ai eu l'opportunité de découvrir de nombreuses compétences et méthodes de travail incroyables. J'ai appris à maîtriser des frameworks, des langages de programmation, des outils de travail et des méthodes de gestion d'équipe.
-          Dans un avenir proche, j'espère continuer à avancer avec vous sur le chemin de la découverte et de l'innovation.
+        Je suis étudiant à Montpellier, actuellement en BUT Informatique parcours intégration d’applications et management du système d’information, ainsi qu’en L3 Management Technologies et Sciences. Je m’intéresse particulièrement aux métiers situés à l’interface entre les besoins métiers, les outils et les projets : AMOA, analyse fonctionnelle, coordination et systèmes d’information. J’aime comprendre comment un projet s’organise, comment une solution se structure et comment une équipe transforme une idée en réalisation concrète.
         </p>
       </div>
     </section>
